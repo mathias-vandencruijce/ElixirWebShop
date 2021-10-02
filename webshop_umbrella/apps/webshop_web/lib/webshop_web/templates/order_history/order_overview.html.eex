@@ -1,0 +1,34 @@
+<h1><%= gettext "Your Orders" %></h1>
+
+<%= if @orders != [] do %>
+  <table class="table rounded-table">
+    <thead class="thead-light">
+      <tr>
+        <th class="w-20"><%= gettext "Order id" %></th>
+        <th class="w-20"><%= gettext "Date and time" %></th>
+        <th class="w-20"><%= gettext "Total Price" %></th>
+        <th class="mw-10"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for order <- @orders do %>
+          <tr>
+            <td><%= Enum.at(order, 0) %></td>
+            <td><%= Enum.at(order, 1) %></td>
+            <td><%= Enum.at(order, 2) %></td>
+            <td>
+              <span class="pr-2"><%= link "", to: "/order/" <> Integer.to_string(Enum.at(order, 0)), class: "fa fa-lg fa-info-circle text-decoration-none" %></span>
+            </td>
+          </tr>
+      <% end %>
+      <tr>
+        <td></td>
+        <td class="border-top font-weight-bold"><%= gettext "Total" %></td>
+        <td class="border-top font-weight-bold"><%= Float.round(Enum.sum(Enum.map(@orders, fn o -> Enum.at(o, 2) end)), 2) %></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+<% else %>
+  <h2 class="ml-3"><%= gettext "No Orders yet." %></h2>
+<% end %>

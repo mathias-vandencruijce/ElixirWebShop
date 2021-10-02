@@ -1,0 +1,38 @@
+<h1>Show Product</h1>
+
+<ul>
+
+  <li>
+    <strong><%= gettext "Title" %>:</strong>
+    <%= @product.title %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Description" %>:</strong>
+    <%= @product.description %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Stock" %>:</strong>
+    <%= @product.stock %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Size" %>:</strong>
+    <%= @product.size %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Color" %>:</strong>
+    <%= @product.color %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Price" %>:</strong>
+    <%= @product.price %>
+  </li>
+
+</ul>
+
+<span><%= link gettext("Edit"), to: Routes.product_path(@conn, :edit, @product), class: "btn btn-primary rounded" %></span>
+<span><%= link gettext("Back"), to: Routes.product_path(@conn, :index), class: "btn btn-primary rounded ml-2" %></span>

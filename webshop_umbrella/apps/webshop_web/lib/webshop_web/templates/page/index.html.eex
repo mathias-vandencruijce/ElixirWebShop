@@ -1,0 +1,2 @@
+<h1><%= gettext "Home" %></h1>
+<p><%= gettext "Welcome to our humble webshop. We hope you find something you fancy and maybe even something you treasure." %></p>

@@ -1,0 +1,14 @@
+<h1><%= gettext "Bulk Import Product" %></h1>
+
+<%= form_for @conn, Routes.product_path(@conn, :bulk_import), [multipart: true], fn f-> %>
+    <div class="input-group">
+        <%= label f, gettext("File"), class: "w-100" %>
+        <%= file_input f, :file, class: "w-input" %>
+        <%= error_tag f, :file %>
+    </div>
+
+    <div class="w-100 mt-3 mb-3">
+        <%= submit gettext("Upload"), class: "btn btn-primary rounded" %>
+        <%= link gettext("Cancel"), to: Routes.product_path(@conn, :index), class: "btn btn-danger rounded ml-2" %>
+    </div>
+<% end %>

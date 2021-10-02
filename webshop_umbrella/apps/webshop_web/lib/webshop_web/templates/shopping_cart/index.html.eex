@@ -1,0 +1,42 @@
+<h1><%= gettext "Your Shopping cart" %></h1>
+
+<%= if @products != [] do %>
+  <table class="table rounded-table">
+    <thead class="thead-light">
+      <tr>
+        <th class="w-20"><%= gettext "Title" %></th>
+        <th class="w-20"><%= gettext "Description" %></th>
+        <th class="mw-10"><%= gettext "Size" %></th>
+        <th class="mw-10"><%= gettext "Color" %></th>
+        <th class="mw-10"><%= gettext "Price" %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for product <- @products do %>
+          <tr>
+            <td><%= product.title %></td>
+            <td><%= product.description %></td>
+            <td><%= product.size %></td>
+            <td><%= product.color %></td>
+            <td><%= product.price %></td>
+            <td class="mw-5">
+              <span><%= link "", to: Routes.shopping_cart_path(@conn, :delete, product), method: :delete, data: [confirm: "Are you sure?"], class: "fa fa-lg fa-trash text-danger text-decoration-none" %></span>
+            </td>
+          </tr>
+      <% end %>
+        <tr>
+          <td class="border-top"></td>
+          <td class="border-top"></td>
+          <td class="border-top"></td>
+          <td class="border-top font-weight-bold"><%= gettext "Total" %></td>
+          <td class="border-top font-weight-bold"><%= Float.round(Enum.sum(Enum.map(@products, fn p -> p.price end)), 2) %></td>
+          <td class="border-top"></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <span><%= link "Configure address", to: Routes.order_history_path(@conn, :address), class: "btn btn-primary rounded" %></span>
+<% else %>
+  <h2 class="ml-3"><%= gettext "Your shopping cart is empty." %></h2>
+<% end %>

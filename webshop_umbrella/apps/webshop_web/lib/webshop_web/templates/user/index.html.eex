@@ -1,0 +1,44 @@
+<h1><%= gettext "User Overview" %></h1>
+
+<%= if @users != [] do %>
+  <table class="table rounded-table">
+    <thead class="thead-light">
+      <tr>
+        <th class="w-20"><%= gettext "First name" %></th>
+        <th class="w-20"><%= gettext "Last name" %></th>
+        <th class="w-20"><%= gettext "Email" %></th>
+        <th class="mw-10"><%= gettext "Role" %></th>
+        <th class="mw-10"><%= gettext "Verified" %></th>
+        <th class="mw-10"></th>
+      </tr>
+    </thead>
+    <tbody>
+    <%= for user <- @users do %>
+        <tr>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.role %></td>
+          <td>
+            <%= if user.password_reset_token != nil do %>
+              <%= gettext "false" %>
+              <span><%= link gettext("Verify"), to: Routes.user_path(@conn, :manual_verify, id: user.id), class: "btn btn-primary rounded ml-2 pt-0 pb-0" %><span>
+            <% else %>
+              <%= gettext "true" %>
+            <% end %>
+          </td>
+
+          <td>
+            <span class="pr-2"><%= link "", to: Routes.user_path(@conn, :show, user), class: "fa fa-lg fa-info-circle text-decoration-none" %></span>
+            <span class="pr-2"><%= link "", to: Routes.user_path(@conn, :edit, user), class: "fa fa-lg fa-edit text-decoration-none" %></span>
+            <span><%= link "", to: Routes.user_path(@conn, :delete, user), method: :delete, data: [confirm: gettext("Are you sure?")], class: "fa fa-lg fa-trash text-danger text-decoration-none" %></span>
+          </td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h2 class="ml-3"><%= gettext "No users yet." %></h2>
+<% end %>
+
+<span><%= link gettext("New User"), to: Routes.user_path(@conn, :new), class: "btn btn-primary rounded" %></span>

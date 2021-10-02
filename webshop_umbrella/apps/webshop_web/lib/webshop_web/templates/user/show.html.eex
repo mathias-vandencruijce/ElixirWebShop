@@ -1,0 +1,58 @@
+<h1><%= gettext "Show User" %></h1>
+
+<ul>
+
+  <li>
+    <strong><%= gettext "First name" %>:</strong>
+    <%= @user.first_name %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Last name" %>:</strong>
+    <%= @user.last_name %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Role" %>:</strong>
+    <%= @user.role %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Email" %>:</strong>
+    <%= @user.email %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Country" %>:</strong>
+    <%= @user.country %>
+  </li>
+
+  <li>
+    <strong><%= gettext "City" %>:</strong>
+    <%= @user.city %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Zip code" %>:</strong>
+    <%= @user.zip_code %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Street" %>:</strong>
+    <%= @user.street %>
+  </li>
+
+  <li>
+    <strong><%= gettext "House number" %>:</strong>
+    <%= @user.house_number %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Verified" %>:</strong>
+    <%= if @user.password_reset_token == nil, do: gettext "true" %>
+    <%= if @user.password_reset_token != nil, do: gettext "false" %>
+  </li>
+</ul>
+
+<span><%= link gettext("Edit"), to: Routes.user_path(@conn, :edit, @user), class: "btn btn-primary rounded" %></span>
+<span><%= link gettext("Back"), to: Routes.user_path(@conn, :index), class: "btn btn-primary rounded ml-2" %></span>

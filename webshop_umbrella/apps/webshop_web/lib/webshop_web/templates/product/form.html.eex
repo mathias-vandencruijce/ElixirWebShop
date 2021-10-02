@@ -1,0 +1,46 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <p class="alert alert-danger rounded"><%= gettext "Oops, something went wrong! Please check the errors below." %></p>
+  <% end %>
+
+  <div class="input-group">
+    <%= label f, gettext("Title"), class: "w-100" %>
+    <%= text_input f, :title, class: "w-input" %>
+    <%= error_tag f, :title %>
+  </div>
+
+  <div class="input-group">
+    <%= label f, gettext("Description"), class: "w-100" %>
+    <%= text_input f, :description, class: "w-input" %>
+    <%= error_tag f, :description %>
+  </div>
+
+  <div class="input-group">
+    <%= label f, gettext("Stock"), class: "w-100" %>
+    <%= number_input f, :stock, step: 1, class: "w-input", min: 0 %>
+    <%= error_tag f, :stock %>
+  </div>
+
+  <div class="input-group">
+    <%= label f, gettext("Size"), class: "w-100" %>
+    <%= number_input f, :size, step: 1, class: "w-input", min: 0 %>
+    <%= error_tag f, :size %>
+  </div>
+
+  <div class="input-group">
+    <%= label f, gettext("Color"), class: "w-100" %>
+    <%= text_input f, :color, class: "w-input" %>
+    <%= error_tag f, :color %>
+  </div>
+
+  <div class="input-group">
+    <%= label f, gettext("Price"), class: "w-100" %>
+    <%= number_input f, :price, step: 0.01, class: "w-input", min: 0 %>
+    <%= error_tag f, :price %>
+  </div>
+
+  <div class="w-100 mt-3 mb-3">
+    <%= submit gettext("Save"), class: "btn btn-primary rounded" %>
+    <%= link gettext("Cancel"), to: Routes.product_path(@conn, :index), class: "btn btn-danger rounded ml-2" %>
+  </div>
+<% end %>

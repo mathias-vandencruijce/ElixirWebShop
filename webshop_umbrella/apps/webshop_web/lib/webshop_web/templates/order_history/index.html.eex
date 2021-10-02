@@ -1,0 +1,30 @@
+<h1><%= gettext "Order Overview" %></h1>
+
+<%= if @userOrders != [] do %>
+  <table class="table rounded-table">
+    <thead class="thead-light">
+      <tr>
+        <th class="w-20"><%= gettext "User id" %></th>
+        <th class="w-20"><%= gettext "Order id" %></th>
+        <th class="w-20"><%= gettext "Date and time" %></th>
+        <th class="w-20"><%= gettext "Total Price" %></th>
+        <th class="mw-10"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for order <- @userOrders do %>
+          <tr>
+            <td><%= Enum.at(order, 0)%></td>
+            <td><%= Enum.at(order, 1) %></td>
+            <td><%= Enum.at(order, 2) %></td>
+            <td><%= Enum.at(order, 3) %></td>
+            <td>
+              <span class="pr-2"><%= link "", to: Routes.order_history_path(@conn, :orderOverviewForUserAndOrderId, order_id: Integer.to_string(Enum.at(order, 1)), user_id:  Integer.to_string(Enum.at(order, 0))), class: "fa fa-lg fa-info-circle text-decoration-none" %></span>
+            </td>
+          </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h2 class="ml-3"><%= gettext "No Orders yet." %></h2>
+<% end %>

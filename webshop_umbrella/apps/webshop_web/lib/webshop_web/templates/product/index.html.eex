@@ -1,0 +1,44 @@
+<h1><%= gettext "Product Overview" %></h1>
+
+<%= if @products != [] do %>
+  <table class="table rounded-table">
+    <thead class="thead-light">
+      <tr>
+        <th class="w-20"><%= gettext "Title" %></th>
+        <th class="w-20"><%= gettext "Description" %></th>
+        <th class="mw-10"><%= gettext "Stock" %></th>
+        <th class="mw-10"><%= gettext "Size" %></th>
+        <th class="w-20"><%= gettext "Color" %></th>
+        <th class="mw-10"><%= gettext "Price" %></th>
+        <th class="mw-10"></th>
+      </tr>
+    </thead>
+    <tbody>
+    <%= for product <- @products do %>
+        <tr>
+          <td><%= product.title %></td>
+          <td class="text-break"><%= product.description %></td>
+          <td><%= product.stock %></td>
+          <td><%= product.size %></td>
+          <td><%= product.color %></td>
+          <td><%= product.price %></td>
+
+          <%= if current_user(@conn) != nil && current_user(@conn).role == "Admin" do %>
+            <td>
+              <span class="pr-2"><%= link "", to: Routes.product_path(@conn, :show, product), class: "fa fa-lg fa-info-circle text-decoration-none" %></span>
+              <span class="pr-2"><%= link "", to: Routes.product_path(@conn, :edit, product), class: "fa fa-lg fa-edit text-decoration-none" %></span>
+              <span><%= link "", to: Routes.product_path(@conn, :delete, product), method: :delete, data: [confirm: "Are you sure?"], class: "fa fa-lg fa-trash text-danger text-decoration-none" %></span>
+            </td>
+          <% end %>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h2 class="ml-3"><%= gettext "No products yet." %></h2>
+<% end %>
+
+<%= if current_user(@conn) != nil && current_user(@conn).role == "Admin" do %>
+  <span><%= link gettext("New Product"), to: Routes.product_path(@conn, :new), class: "btn btn-primary rounded" %></span>
+  <span class="ml-2"><%= link gettext("Bulk Import Products"), to: Routes.product_path(@conn, :import), class: "btn btn-primary rounded" %></span>
+<% end %>

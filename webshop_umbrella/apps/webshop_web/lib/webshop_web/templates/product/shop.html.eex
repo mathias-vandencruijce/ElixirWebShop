@@ -1,0 +1,123 @@
+<h1><%= gettext "Product Overview" %></h1>
+<%= form_for @conn, Routes.product_path(@conn, :search), fn f -> %>
+  <div class="input-group">
+    <%= text_input f, :title, placeholder: gettext("Title"), class: "w-input mb-2" %>
+  </div>
+  <div class="input-group">
+    <%= number_input f, :size, placeholder: gettext("Size"), min: 0, class: "w-input mb-2" %>
+  </div>
+  <div class="input-group">
+    <%= text_input f, :color, placeholder: gettext("Color"), class: "w-input mb-2" %>
+  </div>
+  <div class="input-group">
+    <%= number_input f, :minPrice, placeholder: gettext("Minimum Price"), min: 0, step: 0.01, class: "w-input mb-2" %>
+  </div>
+  <div class="input-group">
+    <%= number_input f, :maxPrice, placeholder: gettext("Maximum Price"), min: 0, step: 0.01, class: "w-input" %>
+  </div>
+
+  <div class="w-100 mt-3 mb-3">
+    <%= submit gettext("Search"), class: "btn btn-primary rounded" %>
+    <%= link gettext("Reset"), to: Routes.product_path(@conn, :shop), class: "btn btn-danger rounded ml-2" %>
+  </div>
+<% end %>
+</div>
+
+<%= if @products != [] do %>
+<div class="items d-flex flex-wrap row justify-content-center">
+  <%= for product <- @products do %>
+    <div  class="item border bg-light p-2 m-2 rounded" id="<%= product.id %>" style="width: 12rem">
+      <div class="d-flex justify-content-center">
+        <img src="https://cdn.discordapp.com/attachments/304343829656502273/844201792837517332/unknown.png" alt="<%= product.title %>" class="img-item productImage rounded" style="width: 10rem"/>
+      </div>
+      <div class="info pl-1">
+        <h3 class="text-center productTitle"><%= product.title %></h3>
+        <p class="mb-0 productDescription d-none"><%= product.description %></p>
+        <p class="mb-0 productSize"><%= product.size %></p>
+        <p class="mb-0 productColor"><%= product.color %></p>
+        <p class="mb-0 productPrice">€<%= product.price %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<% else %>
+  <h2 class="ml-3"><%= gettext "No products yet." %></h2>
+<% end %>
+
+<div class="d-none position-fixed fixed-top" id="details">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title detailsTitle"></h4>
+              <button type="button" class="close closeJs">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="detailsContent" class="modal-body mb-2 mt-2">
+            <div class="d-flex justify-content-center mt-2">
+              <img class="detailsImage rounded" class="img-item" style="width: 10rem"/>
+            </div>
+            <div class="d-flex justify-content-center p-2">
+              <table>
+                <tr class="d-none">
+                  <th></th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td class="pr-2"><%= gettext "Description:" %></td>
+                  <td class="mb-0 detailsDescription text-break"><td>
+                </tr>
+                <tr>
+                  <td><%= gettext "Size:" %></td>
+                  <td class="mb-0 detailsSize"><td>
+                </tr>
+                <tr>
+                  <td><%= gettext "Color:" %></td>
+                  <td class="mb-0 detailsColor"><td>
+                </tr>
+                <tr>
+                  <td><%= gettext "Price:" %></td>
+                  <td class="mb-0 detailsPrice"><td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <%= if current_user(@conn) != nil do %>
+            <div class="modal-footer justify-content-center">
+                <%= form_for @changeset, Routes.shopping_cart_path(@conn, :create), fn f -> %>
+                  <%= number_input f, :product_id, class: "d-none" %>
+
+                  <%= submit "", class: "btn btn-primary rounded fa fa-shopping-cart p-2" %>
+               <% end %>
+            </div>
+            <% end %>
+      </div>
+  </div>
+</div>
+
+<script>
+  window.onload = function() {
+    document.querySelectorAll('.closeJs').forEach(elem => elem.addEventListener('click', close));
+    document.getElementById('details').addEventListener('click', function(e) {
+      if (e.target != this) return;
+      else close();
+    });
+    document.querySelectorAll('.item').forEach(elem => elem.addEventListener('click', function() { showDetails(elem.id); }));
+  }
+
+  function showDetails(id) {
+    if (document.getElementById("shopping_cart_product_id") != undefined)
+      document.getElementById("shopping_cart_product_id").value = id;
+    document.getElementsByClassName("detailsTitle")[0].innerText = document.getElementById(id).getElementsByClassName("productTitle")[0].innerText;
+    document.getElementsByClassName("detailsImage")[0].src = document.getElementById(id).getElementsByClassName("productImage")[0].src;
+    document.getElementsByClassName("detailsDescription")[0].innerText = document.getElementById(id).getElementsByClassName("productDescription")[0].innerText;
+    document.getElementsByClassName("detailsSize")[0].innerText = document.getElementById(id).getElementsByClassName("productSize")[0].innerText;
+    document.getElementsByClassName("detailsColor")[0].innerText = document.getElementById(id).getElementsByClassName("productColor")[0].innerText;
+    document.getElementsByClassName("detailsPrice")[0].innerText = document.getElementById(id).getElementsByClassName("productPrice")[0].innerText;
+    document.getElementById("details").classList.replace("d-none", "d-block");
+  }
+
+  function close() {
+    document.getElementById("details").classList.replace("d-block", "d-none");
+  }
+</script>

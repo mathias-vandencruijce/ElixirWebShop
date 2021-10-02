@@ -1,0 +1,245 @@
+/* This file is for your main application css. */
+@import "./bootstrap.css";
+
+.w-input {
+  width: 32rem
+}
+
+/* Alerts and form errors */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert p {
+  margin-bottom: 0;
+}
+.alert:empty {
+  display: none;
+}
+.invalid-feedback {
+  color: #a94442;
+  display: block;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 7rem;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  left: auto;
+  right: 0;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+.w-20 {
+  min-width: 20%;
+}
+
+.mw-10 {
+  min-width: 10%;
+}
+
+.mw-5 {
+  width: 5%;
+}
+
+.red-onhover:hover {
+  color: #ffccd7;
+  background-color: #d90030 !important;
+}
+
+#details {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+}
+
+#details div {
+  width: 20rem;
+}
+
+.rounded-table th:first-child {
+  border-top-left-radius: .5rem;
+}
+
+.rounded-table th:last-child {
+  border-top-right-radius: .5rem;
+}
+
+.rounded-table th {
+  border-top: 0;
+}
+
+/* Googly eyes */
+
+#eyes {
+  display: block;
+  position: relative;
+  width: 200px;
+  margin: 10% auto 0;
+  -webkit-animation: shvr 0.2s infinite;
+  animation: shvr 0.2s infinite;
+}
+
+#eyes::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #000;
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  border-radius: 50%;
+  box-shadow: 125px 0 0 #000;
+  -webkit-animation: eye 2.5s infinite;
+  animation: eye 2.5s infinite;
+}
+
+.eye {
+  position: relative;
+  display: inline-block;
+  background: #fff; /*eye*/
+  border: 2px solid black;
+  width: 75px;
+  height: 80px;
+  border-radius: 50% 50% 50% 50%/45px 45px 45% 45%;
+  transform: rotate(45deg);
+}
+
+.eye::after {
+  content: '';
+  position: absolute;
+  border-bottom: 2px solid #000; /*eye lid*/
+  width: 70px;
+  height: 50px;
+  left: 0;
+  bottom: -10px;
+  border-radius: 50%;
+}
+
+.eye::before {
+  bottom: auto;
+  top: -100px;
+  transform: rotate(45deg);
+  left: 0;
+}
+
+#eyes div:nth-of-type(2) {
+  transform: scaleX(-1);
+}
+
+.eye:nth-of-type(2) {
+  float: right;
+  transform: rotate(-45deg);
+}
+
+.eye:nth-of-type(2)::after {
+  left: 5px;
+}
+
+.eye:nth-of-type(3) {
+  display: none;
+}
+
+#eyes {
+  margin-top: 7rem;
+}
+
+@-webkit-keyframes eye {
+  0%, 30%, 55%, 90%, 100% {
+      transform: translate(0, 0);
+  }
+  10%, 25% {
+      transform: translate(0, 20px);
+  }
+  65% {
+      transform: translate(-20px, 0);
+  }
+  80% {
+      transform: translate(20px, 0);
+  }
+}
+
+@keyframes eye {
+  0%, 30%, 55%, 90%, 100% {
+      transform: translate(0, 0);
+  }
+  10%, 25% {
+      transform: translate(0, 20px);
+  }
+  65% {
+      transform: translate(-20px, 0);
+  }
+  80% {
+      transform: translate(20px, 0);
+  }
+}
+
+@-webkit-keyframes shvr {
+  0% {
+      transform: translate(1px, 1em);
+  }
+  50% {
+      transform: translate(0, 1em);
+  }
+  100% {
+      transform: translate(-1px, 1em);
+  }
+}
+
+@keyframes shvr {
+  0% {
+      transform: translate(1px, 1em);
+  }
+  50% {
+      transform: translate(0, 1em);
+  }
+  100% {
+      transform: translate(-1px, 1em);
+  }
+}
+
+@-webkit-keyframes text-show {
+  to {
+      text-indent: -373px;
+  }
+}
+
+@keyframes text-show {
+  to {
+      text-indent: -373px;
+  }
+}

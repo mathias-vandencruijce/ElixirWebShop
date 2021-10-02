@@ -1,0 +1,3 @@
+<h1><%= gettext "New User" %></h1>
+
+<%= render "form.html", %{action: Routes.user_path(@conn, :create), cancel: Routes.user_path(@conn, :index), changeset: @changeset, conn: @conn, acceptable_roles: @acceptable_roles} %>

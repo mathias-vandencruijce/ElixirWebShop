@@ -1,0 +1,6 @@
+<h1>Invalid token</h1>
+<%= if @expiredToken do %>
+    <p>This token has expired. A new verification link has been sent to your email. Should you not have received the confirmation email, you can resend it by clicking <a href="/regenerateToken?token=<%= @expiredToken %>">here</a>.</p>
+<% else %>
+    <p><%= gettext "This token is invalid." %></p>
+<% end %>

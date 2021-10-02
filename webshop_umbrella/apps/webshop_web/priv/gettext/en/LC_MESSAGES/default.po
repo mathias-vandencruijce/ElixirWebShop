@@ -1,0 +1,492 @@
+## "msgid"s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove "msgid"s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use "mix gettext.extract --merge" or "mix gettext.merge"
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2\n"
+
+#, elixir-format
+#: lib/webshop_web/templates/user/register.html.eex:1
+msgid "Register"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/form.html.eex:3
+#: lib/webshop_web/templates/user/form.html.eex:3
+msgid "Oops, something went wrong! Please check the errors below."
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/index.html.eex:44
+#: lib/webshop_web/templates/user/new.html.eex:1
+msgid "New User"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/form.html.eex:43
+#: lib/webshop_web/templates/user/form.html.eex:75
+msgid "Save"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/form.html.eex:73
+msgid "Sign up"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/layout/app.html.eex:16
+#: lib/webshop_web/templates/page/index.html.eex:1
+msgid "Home"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/layout/app.html.eex:44
+#: lib/webshop_web/templates/session/login.html.eex:1 lib/webshop_web/templates/session/login.html.eex:17
+msgid "Login"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/session/login.html.eex:25
+msgid "Sign up here"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/session/login.html.eex:25
+msgid "Don't have an account?"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/edit.html.eex:1
+msgid "Edit User"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/layout/app.html.eex:36
+msgid "language_code"
+msgstr "EN"
+
+#, elixir-format
+#: lib/webshop_web/templates/product/bulk_import.html.eex:12
+#: lib/webshop_web/templates/product/form.html.eex:44 lib/webshop_web/templates/user/form.html.eex:77
+msgid "Cancel"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/layout/app.html.eex:51
+#: lib/webshop_web/templates/user/settings.html.eex:1
+msgid "Settings"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/error.html.eex:5
+msgid "This token is invalid."
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/form.html.eex:48
+#: lib/webshop_web/templates/user/show.html.eex:31
+msgid "City"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/form.html.eex:42
+#: lib/webshop_web/templates/user/show.html.eex:26
+msgid "Country"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/session/login.html.eex:5
+#: lib/webshop_web/templates/user/form.html.eex:19 lib/webshop_web/templates/user/index.html.eex:9
+#: lib/webshop_web/templates/user/show.html.eex:21
+msgid "Email"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/form.html.eex:7
+#: lib/webshop_web/templates/user/index.html.eex:7 lib/webshop_web/templates/user/show.html.eex:6
+msgid "First name"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/form.html.eex:66
+#: lib/webshop_web/templates/user/show.html.eex:46
+msgid "House number"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/form.html.eex:13
+#: lib/webshop_web/templates/user/index.html.eex:8 lib/webshop_web/templates/user/show.html.eex:11
+msgid "Last name"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/session/login.html.eex:11
+#: lib/webshop_web/templates/user/form.html.eex:35
+msgid "Password"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/form.html.eex:27
+#: lib/webshop_web/templates/user/index.html.eex:10 lib/webshop_web/templates/user/show.html.eex:16
+msgid "Role"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/form.html.eex:60
+#: lib/webshop_web/templates/user/show.html.eex:41
+msgid "Street"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/form.html.eex:54
+#: lib/webshop_web/templates/user/show.html.eex:36
+msgid "Zip code"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/index.html.eex:34
+msgid "Are you sure?"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/show.html.eex:37
+#: lib/webshop_web/templates/user/show.html.eex:57
+msgid "Edit"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/index.html.eex:1
+msgid "User Overview"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/order_history/order_confirmation.html.eex:36
+#: lib/webshop_web/templates/order_history/order_confirmation.html.eex:38 lib/webshop_web/templates/product/show.html.eex:38
+#: lib/webshop_web/templates/user/show.html.eex:58
+msgid "Back"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/show.html.eex:1
+msgid "Show User"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/index.html.eex:11
+#: lib/webshop_web/templates/user/show.html.eex:51
+msgid "Verified"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/index.html.eex:27
+#: lib/webshop_web/templates/user/show.html.eex:52
+msgid "true"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/index.html.eex:24
+#: lib/webshop_web/templates/user/show.html.eex:53
+msgid "false"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/layout/app.html.eex:53
+msgid "Logout"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/error/404.html.eex:7
+#: lib/webshop_web/templates/error/500.html.eex:7 lib/webshop_web/templates/layout/app.html.eex:7
+msgid "Webshop"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/layout/app.html.eex:20
+msgid "User Panel"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/email/registration_confirmation.html.eex:14
+#: lib/webshop_web/templates/user/index.html.eex:25
+msgid "Verify"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/email/registration_confirmation.html.eex:12
+msgid "email_welcome"
+msgstr "Welcome to our webshop!"
+
+#, elixir-format
+#: lib/webshop_web/templates/email/registration_confirmation.html.eex:13
+msgid "verification_steps"
+msgstr "Click the button below to verify your account, if you did not try to register an account on our shop, please ignore this email."
+
+#, elixir-format
+#: lib/webshop_web/templates/product/bulk_import.html.eex:1
+msgid "Bulk Import Product"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/edit.html.eex:1
+msgid "Edit Product"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/bulk_import.html.eex:11
+msgid "Upload"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/bulk_import.html.eex:5
+msgid "File"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/new.html.eex:1
+msgid "Add Product"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/index.html.eex:43
+msgid "Bulk Import Products"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/email/order_confirmation.html.eex:20
+#: lib/webshop_web/templates/order_history/order_confirmation.html.eex:11 lib/webshop_web/templates/product/form.html.eex:31
+#: lib/webshop_web/templates/product/index.html.eex:11 lib/webshop_web/templates/product/shop.html.eex:10
+#: lib/webshop_web/templates/product/show.html.eex:26 lib/webshop_web/templates/shopping_cart/index.html.eex:10
+msgid "Color"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/email/order_confirmation.html.eex:18
+#: lib/webshop_web/templates/order_history/order_confirmation.html.eex:9 lib/webshop_web/templates/product/form.html.eex:13
+#: lib/webshop_web/templates/product/index.html.eex:8 lib/webshop_web/templates/product/show.html.eex:11
+#: lib/webshop_web/templates/shopping_cart/index.html.eex:8
+msgid "Description"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/index.html.eex:42
+msgid "New Product"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/email/order_confirmation.html.eex:21
+#: lib/webshop_web/templates/order_history/order_confirmation.html.eex:12 lib/webshop_web/templates/product/form.html.eex:37
+#: lib/webshop_web/templates/product/index.html.eex:12 lib/webshop_web/templates/product/show.html.eex:31
+#: lib/webshop_web/templates/shopping_cart/index.html.eex:11
+msgid "Price"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/email/order_confirmation.html.eex:19
+#: lib/webshop_web/templates/order_history/order_confirmation.html.eex:10 lib/webshop_web/templates/product/form.html.eex:25
+#: lib/webshop_web/templates/product/index.html.eex:10 lib/webshop_web/templates/product/shop.html.eex:7
+#: lib/webshop_web/templates/product/show.html.eex:21 lib/webshop_web/templates/shopping_cart/index.html.eex:9
+msgid "Size"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/form.html.eex:19
+#: lib/webshop_web/templates/product/index.html.eex:9 lib/webshop_web/templates/product/show.html.eex:16
+msgid "Stock"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/email/order_confirmation.html.eex:17
+#: lib/webshop_web/templates/order_history/order_confirmation.html.eex:8 lib/webshop_web/templates/product/form.html.eex:7
+#: lib/webshop_web/templates/product/index.html.eex:7 lib/webshop_web/templates/product/shop.html.eex:4
+#: lib/webshop_web/templates/product/show.html.eex:6 lib/webshop_web/templates/shopping_cart/index.html.eex:7
+msgid "Title"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/index.html.eex:1
+#: lib/webshop_web/templates/product/shop.html.eex:1
+msgid "Product Overview"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/shop.html.eex:75
+msgid "Color:"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/settings.html.eex:8
+msgid "Generate"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/shop.html.eex:16
+msgid "Maximum Price"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/shop.html.eex:13
+msgid "Minimum Price"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/index.html.eex:38
+#: lib/webshop_web/templates/product/shop.html.eex:44
+msgid "No products yet."
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/user/index.html.eex:41
+msgid "No users yet."
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/shop.html.eex:79
+msgid "Price:"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/layout/app.html.eex:21
+msgid "Product Panel"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/shop.html.eex:21
+msgid "Reset"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/shop.html.eex:20
+msgid "Search"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/layout/app.html.eex:26
+msgid "Shop"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/shop.html.eex:71
+msgid "Size:"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/email/order_confirmation.html.eex:38
+#: lib/webshop_web/templates/order_history/order_confirmation.html.eex:29 lib/webshop_web/templates/order_history/order_overview.html.eex:26
+#: lib/webshop_web/templates/shopping_cart/index.html.eex:32
+msgid "Total"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/shopping_cart/index.html.eex:1
+msgid "Your Shopping cart"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/shopping_cart/index.html.eex:41
+msgid "Your shopping cart is empty."
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/order_history/index.html.eex:29
+#: lib/webshop_web/templates/order_history/order_overview.html.eex:33
+msgid "No Orders yet."
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/email/order_confirmation.html.eex:11
+#: lib/webshop_web/templates/order_history/order_confirmation.html.eex:1
+msgid "Order"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/order_history/index.html.eex:1
+msgid "Order Overview"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/email/order_confirmation.html.eex:12
+#: lib/webshop_web/templates/order_history/order_confirmation.html.eex:3
+msgid "Thank you for your purchase! We will contact you later on with further details on your delivery."
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/email/order_confirmation.html.eex:44
+msgid "Kind regards, our webshop team."
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/order_history/index.html.eex:9
+#: lib/webshop_web/templates/order_history/order_overview.html.eex:8
+msgid "Date and time"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/layout/app.html.eex:22
+#: lib/webshop_web/templates/layout/app.html.eex:52
+msgid "Order History"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/order_history/index.html.eex:8
+#: lib/webshop_web/templates/order_history/order_overview.html.eex:7
+msgid "Order id"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/order_history/index.html.eex:10
+#: lib/webshop_web/templates/order_history/order_overview.html.eex:9
+msgid "Total Price"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/order_history/order_overview.html.eex:1
+msgid "Your Orders"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/shopping_cart/index.html.eex:39
+msgid "Check-out"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/product/shop.html.eex:67
+msgid "Description:"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/error/404.html.eex:22
+#: lib/webshop_web/templates/error/500.html.eex:22
+msgid "Error"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/error/404.html.eex:24
+#: lib/webshop_web/templates/error/500.html.eex:24
+msgid "Go back home"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/error/500.html.eex:23
+msgid "Internal Server Error"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/error/404.html.eex:23
+msgid "Page not found"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/order_history/index.html.eex:7
+msgid "User id"
+msgstr ""
+
+#, elixir-format
+#: lib/webshop_web/templates/page/index.html.eex:2
+msgid "Welcome to our humble webshop. We hope you find something you fancy and maybe even something you treasure."
+msgstr ""

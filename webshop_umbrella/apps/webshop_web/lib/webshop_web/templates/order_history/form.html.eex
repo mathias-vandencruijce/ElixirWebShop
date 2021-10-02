@@ -1,0 +1,33 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <p class="alert alert-danger rounded"><%= gettext "Oops, something went wrong! Please check the errors below." %></p>
+  <% end %>
+
+  <div class="input-group">
+    <%= label f, "postcode*", class: "w-100" %>
+    <%= number_input f, :postcode, class: "w-input" %>
+    <%= error_tag f, :postcode %>
+  </div>
+
+  <div class="input-group">
+    <%= label f, "straatnaam*", class: "w-100" %>
+    <%= text_input f, :straatnaam, class: "w-input" %>
+    <%= error_tag f, :straatnaam %>
+  </div>
+
+  <div class="input-group">
+    <%= label f, "huisnummer", class: "w-100" %>
+    <%= number_input f, :huisnummer, step: 1, class: "w-input", min: 0 %>
+    <%= error_tag f, :huisnummer %>
+  </div>
+
+  <div class="input-group">
+    <%= label f, "busnummer", class: "w-100" %>
+    <%= number_input f, :busnummer, step: 1, class: "w-input", min: 0 %>
+    <%= error_tag f, :busnummer %>
+  </div>
+
+  <div class="w-100 mt-3 mb-3">
+    <%= submit "Check Out", class: "btn btn-primary rounded" %>
+  </div>
+<% end %>

@@ -1,0 +1,12 @@
+<h1><%= gettext "Settings" %></h1>
+<%= if current_user(@conn).role == "Admin" do %>
+    <div class="pb-2">
+        <div class="input-group">
+            <label class="w-100">API Key</label>
+            <input value="<%= current_user(@conn).api_key %>" class="w-input" readonly/>
+        </div>
+        <%= link(gettext("Generate"), to: Routes.user_path(@conn, :generate_api_key), class: "btn btn-primary rounded mt-2" ) %>
+    </div>
+<% end %>
+
+<%= render "form.html", %{action: Routes.user_path(@conn, :saveSettings), cancel: nil, changeset: @changeset, conn: @conn, acceptable_roles: @acceptable_roles} %>

@@ -1,0 +1,25 @@
+<h2><%= gettext "Login" %></h2>
+
+<%= form_for @changeset, @action, fn f -> %>
+    <div class="form-group">
+        <%= label f, gettext("Email"), class: "control-label" %>
+        <%= text_input f, :email, class: "form-control rounded" %>
+        <%= error_tag f, :email %>
+    </div>
+
+    <div class="form-group">
+        <%= label f, gettext("Password"), class: "control-label" %>
+        <%= password_input f, :password, class: "form-control rounded" %>
+        <%= error_tag f, :password %>
+    </div>
+
+    <div class="form-group">
+        <%= submit gettext("Login"), class: "btn btn-primary rounded" %>
+    </div>
+<% end %>
+
+<%= if @notVerified do %>
+    <p class="alert alert-danger mt-2 rounded">Your account has not been verified yet, please check your email or <a href="/resendEmail">click here</a> to resend a verification email.</p>
+<% end %>
+
+<p><%= gettext "Don't have an account?" %> <a href="/register"><%= gettext "Sign up here" %></a></p>

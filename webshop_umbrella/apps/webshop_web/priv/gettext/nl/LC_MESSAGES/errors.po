@@ -1,0 +1,87 @@
+## "msgid"s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove "msgid"s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use "mix gettext.extract --merge" or "mix gettext.merge"
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: nl\n"
+"Plural-Forms: nplurals=2\n"
+
+msgid "can't be blank"
+msgstr "Kan niet leeg zijn"
+
+msgid "has already been taken"
+msgstr "Is al gepakt"
+
+msgid "is invalid"
+msgstr "Is ongeldig"
+
+msgid "must be accepted"
+msgstr "Moet geacepteerd zijn"
+
+msgid "has invalid format"
+msgstr "Heeft ongeldig formaat"
+
+msgid "has an invalid entry"
+msgstr "Heeft ongeldige invoer"
+
+msgid "is reserved"
+msgstr "Is gereserveerd"
+
+msgid "does not match confirmation"
+msgstr "Is niet gelijk aan"
+
+msgid "is still associated with this entry"
+msgstr "Is nog steeds geassocieerd met deze invoer"
+
+msgid "are still associated with this entry"
+msgstr "Zijn nog steeds geassocieerd met deze invoer"
+
+msgid "should be %{count} character(s)"
+msgid_plural "should be %{count} character(s)"
+msgstr[0] "Moet %{count} karakter zijn"
+msgstr[1] "Moet %{count} karakters zijn"
+
+msgid "should have %{count} item(s)"
+msgid_plural "should have %{count} item(s)"
+msgstr[0] "Moet %{count} item hebben"
+msgstr[1] "Moet %{count} items hebben"
+
+msgid "should be at least %{count} character(s)"
+msgid_plural "should be at least %{count} character(s)"
+msgstr[0] "Moet minstens %{count} karakter zijn"
+msgstr[1] "Moet minstens %{count} karakters zijn"
+
+msgid "should have at least %{count} item(s)"
+msgid_plural "should have at least %{count} item(s)"
+msgstr[0] "Moet minstens %{count} item bevatten"
+msgstr[1] "Moet minstens %{count} items bevatten"
+
+msgid "should be at most %{count} character(s)"
+msgid_plural "should be at most %{count} character(s)"
+msgstr[0] "Moet hoogstens %{count} karakter zijn"
+msgstr[1] "Moet hoogstens %{count} karakters zijn"
+
+msgid "should have at most %{count} item(s)"
+msgid_plural "should have at most %{count} item(s)"
+msgstr[0] "Mag maximum %{count} item bevatten"
+msgstr[1] "Mag maximum %{count} items bevatten"
+
+msgid "must be less than %{number}"
+msgstr "Moet kleiner zijn dan %{number}"
+
+msgid "must be greater than %{number}"
+msgstr "Moet groter zijn dan %{number}"
+
+msgid "must be less than or equal to %{number}"
+msgstr "Moet kleiner zijn of gelijk aan %{number}"
+
+msgid "must be greater than or equal to %{number}"
+msgstr "Moet groter zijn of gelijk aan %{number}"
+
+msgid "must be equal to %{number}"
+msgstr "Moet gelijk zijn aan %{number}"
